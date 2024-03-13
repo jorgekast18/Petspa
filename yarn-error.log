@@ -1,0 +1,42 @@
+Arguments: 
+  /opt/homebrew/Cellar/node/21.7.1/bin/node /usr/local/bin/yarn add @hotwired/stimulus
+
+PATH: 
+  /Users/jorgecastano/.gem/bin:/Users/jorgecastano/.rbenv/versions/3.3.0/bin:/opt/homebrew/Cellar/rbenv/1.2.0/libexec:/Users/jorgecastano/.rbenv/shims:/opt/homebrew/bin:/opt/homebrew/sbin:/usr/local/bin:/System/Cryptexes/App/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin:/Library/Apple/usr/bin:/Users/jorgecastano/Library/Android/sdk/emulator:/Users/jorgecastano/Library/Android/sdk/platform-tools:/opt/homebrew/opt/fzf/bin
+
+Yarn version: 
+  1.22.19
+
+Node version: 
+  21.7.1
+
+Platform: 
+  darwin arm64
+
+Trace: 
+  Error: EACCES: permission denied, unlink '/Users/jorgecastano/Documents/Courses/Ruby/Petspa/node_modules/@hotwired/stimulus/LICENSE.md'
+
+npm manifest: 
+  {
+    "name": "petspa",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+      "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/jorgekast18/Petspa.git"
+    },
+    "private": true,
+    "dependencies": {
+      "@hotwired/stimulus": "^3.2.2"
+    }
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile

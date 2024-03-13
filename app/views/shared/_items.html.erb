@@ -1,0 +1,7 @@
+<% if user_signed_in? %>
+  <%= link_to 'Edit', edit_user_path(current_user), class: "mx-2 text-white hover:text-gray-200 font-bold text-xl" %>
+  <%= button_to 'Logout', session_path(current_user), method: :delete, form: { data: { turbo_confirm: 'Really?'}} %>
+<% else %>
+  <%= link_to 'Log in', new_session_path, class: "mx-2 text-white hover:text-gray-200 font-bold text-xl" %>
+  <%= link_to 'Sign up', new_user_path, class: "mx-2 bg-white text-blue-500 px-4 py-2 rounded-full hover:bg-blue-400 hover:text-white transition duration-300 font-bold" %>
+<% end %>

@@ -1,0 +1,56 @@
+<h1>Register</h1>
+
+<%= form_with(model: @user) do |form| %>
+  <% @user.errors.full_messages.each do |message| %>
+    <div> <%= message %> </div>
+  <%end %>
+
+  <div data-controller="preview">
+    <%= form.label :avatar, 'Tu Foto' %>
+    <%= form.file_field :avatar, direct_upload: true, data: { preview_target: "input", action: "change->preview#preview"} %>
+    <% if @user.avatar.attached? %>
+      <% image_tag @user.avatar, class: 'avatar-preview', data: { preview_target: "input"} %>
+    <% else %>
+      <%= image_tag 'placeholder.png', class: 'avatar-preview', data: { preview_target: "input"} %>
+    <% end %>
+  </div>
+  <div>
+    <%= form.label :first_name %>
+    <%= form.text_field :first_name, required: true %>
+  </div>
+
+    <div>
+    <%= form.label :last_name %>
+    <%= form.text_field :last_name, required: true %>
+  </div>
+
+    <div>
+    <%= form.label :username %>
+    <%= form.text_field :username, required: true %>
+  </div>
+
+    <div>
+    <%= form.label :phone %>
+    <%= form.text_field :phone, required: true %>
+  </div>
+
+    <div>
+    <%= form.label :email %>
+    <%= form.email_field :email, required: true %>
+  </div>
+
+    <div>
+    <%= form.label :password %>
+    <%= form.password_field :password, required: true %>
+  </div>
+
+    <div>
+    <%= form.label :password_confirmation %>
+    <%= form.password_field :password_confirmation, required: true %>
+  </div>
+
+    <div>
+    <%= form.submit %>
+  </div>
+
+<% end %>

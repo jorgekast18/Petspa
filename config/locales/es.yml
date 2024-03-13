@@ -2,3 +2,16 @@
 es:
   app_name: "Pets Spa"
   meta_title: "Pets Spa - El mejor lugar para tu mascota"
+  activerecord:
+    attributes:
+      user:
+        password: "Contraseña"
+        first_name: 'Nombre'
+        last_name: 'Apellido'
+        email: 'Email'
+        phone: 'Teléfono'
+      errors:
+        messages:
+          blank: 'No puede estar vacio'
+          too_short: "Es demasiado corto (minimo %{count} caracteres)"
+          invalid: 'No es válido'
